@@ -1,0 +1,80 @@
+body {
+  height: 98vh;
+  width: 98.5vw;
+  background: black;
+  color: white;
+  font-family: 'Raleway', Helvetica, sans-serif;
+  display: grid;
+  grid-template:
+      "header header header header" 13vh
+      "top-left top-left center-right right" 25fr
+      "top-left top-left center-right right" 25fr
+      "bot-left bot-center bot-center right" 25fr
+      "bot-left bot-center bot-center right" 25fr
+       / 25fr 25fr 25fr 25fr;
+  grid-gap: 7px 7px;
+}
+
+.header {
+  background: black;
+  grid-area: header;
+  display: flex;
+  padding: 0 5px;
+  justify-content: center;
+}
+
+#logo-img {
+  height: 12vh;
+  width: 25vw;
+}
+
+/*********TILE POSITIONS AND BACKGROUND *************/
+.top-left{
+  background: url('../img/city.jpg') no-repeat center center;
+  background-size: cover;
+  background-position: top;
+  grid-area: top-left;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+
+.center-right{
+  background: url('../img/contact.jpg') no-repeat center center;
+  background-size: cover;
+  grid-area: center-right;
+  align-items: flex-end;
+}
+
+.right{
+  background: url('../img/stars.jpg') no-repeat center center;
+  background-size: cover;
+  grid-area: right;
+  align-items: flex-start;
+}
+
+.bottom-center{
+  background: url('../img/computer.jpg') no-repeat center center;
+  background-size: cover;
+  grid-area: bot-center;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.bottom-left {
+  background: url('../img/snow.jpg') no-repeat center center;
+  background-size: cover;
+  grid-area: bot-left;
+  align-items: flex-start;
+}
+
+/***********STYLING ************************/
+.main {
+  display: flex;
+  padding: 20px;
+}
+.main h1{
+  font-weight: 200;
+  border-bottom: white 2px solid;
+  padding-right: 10%;
+}
