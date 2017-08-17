@@ -23,19 +23,28 @@ body {
   justify-content: center;
 }
 
+.hidden {
+  display: none;
+}
+
 #logo-img {
-  height: 12vh;
-  width: 25vw;
+  height: 16vh;
+  width: auto;
 }
 
 /*********TILE POSITIONS AND BACKGROUND *************/
 .top-left{
+  grid-area: top-left;
+
+}
+
+.top-left .background {
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
   background: url('../img/city.jpg') no-repeat center center;
   background-size: cover;
   background-position: top;
-  grid-area: top-left;
-  justify-content: flex-start;
-  align-items: flex-end;
 }
 
 
@@ -43,13 +52,17 @@ body {
   background: url('../img/contact.jpg') no-repeat center center;
   background-size: cover;
   grid-area: center-right;
-  align-items: flex-end;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
 }
 
 .right{
   background: url('../img/stars.jpg') no-repeat center center;
   background-size: cover;
   grid-area: right;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: flex-start;
 }
 
@@ -61,20 +74,95 @@ body {
   align-items: flex-end;
 }
 
+
+
 .bottom-left {
   background: url('../img/snow.jpg') no-repeat center center;
   background-size: cover;
   grid-area: bot-left;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: flex-start;
 }
 
 /***********STYLING ************************/
 .main {
   display: flex;
-  padding: 20px;
+  overflow: hidden;
 }
+
+.main br{
+  line-height: .8em;
+}
+
+.main .background {
+  height: 100%;
+  width: 100%;
+  display:flex;
+
+
+}
+
+.main:hover .background,
+.main:focus .background {
+  transform: scale(1.1);
+  transition: all 0.5s ease-in;
+
+}
+
+.background::before{
+ content: "";
+ display: none;
+ height: 100%;
+ width: 100%;
+ position: absolute;
+ top: 0;
+ left: 0;
+ background-color: rgba(0,  0, 0, 0.25);
+}
+
+.main:hover .background:before,
+.main:focus .background:before {
+  display: block;
+  transition: all .5s;
+
+}
+
+.main .text {
+  position: absolute;
+  margin-left: 5%;
+}
+
+.main:hover .text{
+  transform: translate(40%,-50%);    transition: all .75s;
+}
+
+.main:hover .text>p,
+.main:focus .text>p {
+  display: block;
+}
+
+.main p {
+  margin-top: 0;
+  margin-left: 5%;
+  font-weight: 120%;
+  font-size: 1.2em;
+}
+
 .main h1{
   font-weight: 200;
   border-bottom: white 2px solid;
   padding-right: 10%;
+  margin-left: 5%;
+  margin-bottom: 10px;
+}
+.bottom-center h1{
+  margin-right: 5%;
+}
+.bottom-center p {
+  padding-right: 9%;
+}
+
+.main h1 strong {
+  font-weight: 300;
 }
