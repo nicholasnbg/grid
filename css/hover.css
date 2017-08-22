@@ -2,11 +2,6 @@
 
 .main .tile .text:before {
   position: absolute;
-  top: 20px;
-  right: 115px;
-  bottom: 120px;
-  left: 20px;
-  border: 1px solid #fff;
   content: '';
   opacity: 0;
   filter: alpha(opacity=0);
@@ -29,10 +24,6 @@
 .main .tile:hover img {
    opacity: 0.6;
    filter: alpha(opacity=60);
-   /*
-   -webkit-transform: translate3d(0,0,0);
-   transform: translate3d(0,0,0);
-*/
    -webkit-transform: scale(1);
    -ms-transform: scale(1);
    transform: scale(1);
@@ -119,6 +110,8 @@
 
 #contact hr {
   width: 50%;
+  color: white;
+  border-width: 1.3px !important;
   opacity: 0;
   filter: alpha(opacity=0);
 }
@@ -204,6 +197,7 @@
 #contact p a:focus {
   opacity: 0.6;
   filter: alpha(opacity=60);
+
 }
 
 #contact  a i {
@@ -212,8 +206,10 @@
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
   /*padding: 10px;*/
-  font-size: 20px;
+  font-size: 24px;
 }
+
+
 
 .middle-icons a:first-child i {
   -webkit-transform: translate3d(-60px,-60px,0) rotate(45deg) scale(2);

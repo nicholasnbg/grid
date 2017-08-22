@@ -27,6 +27,10 @@ body {
   display: none;
 }
 
+.text a {
+  text-decoration: none;
+}
+
 #logo-img {
   height: 14vh;
   width: 14vw;
@@ -67,12 +71,10 @@ body {
 .bottom-center .text {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+
 }
 
-.bottom-center .text h1{
-  padding-right: 50px;
-}
+
 
 
 
@@ -102,11 +104,11 @@ background: linear-gradient(45deg, #ff89e9 0%,#05abe0 100%);*/
 
 .main .tile img{
   height: 100%;
-  max-width: none;
+  width:100%;
   -webkit-transform: scale(1.08);
   -ms-transform: scale(1.08);
   transform: scale(1.08);
-  width: calc(100% + 60px);
+  /*width: calc(100% + 60px);*/
   display: block;
   position: relative;
   -webkit-transition: all 0.35s;
@@ -126,16 +128,19 @@ background: linear-gradient(45deg, #ff89e9 0%,#05abe0 100%);*/
   overflow: hidden;
   top: 0;
   left: 0;
-  padding: 3em;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .main .text h1{
   text-transform: uppercase;
   color: #fff;
   position: relative;
-  font-size: 17px;
+  font-size: 21px;
   background-color: transparent;
-  padding: 20px 0 10px 0;
   text-align: left;
 }
 
@@ -143,6 +148,7 @@ background: linear-gradient(45deg, #ff89e9 0%,#05abe0 100%);*/
 .main .text p {
   margin-top: 0;
   margin-left: 5px;
+  max-width:50%;
   font-weight: 120%;
   font-size: 1.2em;
   opacity: 0;
@@ -150,11 +156,4 @@ background: linear-gradient(45deg, #ff89e9 0%,#05abe0 100%);*/
   background-color:transparent;
   -webkit-transition:all .2s ease-in-out;
   transition:all .2s ease-in-out;
-}
-
-.bottom-center h1{
-  margin-right: 5%;
-}
-.bottom-center p {
-  padding-right: 9%;
 }
