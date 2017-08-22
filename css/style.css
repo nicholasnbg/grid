@@ -7,11 +7,11 @@ body {
   display: grid;
   grid-template:
       "header header header header" 13vh
-      "top-left top-left center-right right" 25fr
-      "top-left top-left center-right right" 25fr
-      "bot-left bot-center bot-center right" 25fr
-      "bot-left bot-center bot-center right" 25fr
-       / 25fr 25fr 25fr 25fr;
+      "about-me about-me contact travel" 1fr
+      "about-me about-me contact travel" 1fr
+      "something portfolio portfolio travel" 1fr
+      "something portfolio portfolio travel" 1fr
+       / 1fr 1fr 1fr 1fr;
   grid-gap: 7px 7px;
 }
 
@@ -37,12 +37,12 @@ body {
 }
 
 /*********TILE POSITIONS AND BACKGROUND *************/
-.top-left{
-  grid-area: top-left;
+.about-me{
+  grid-area: about-me;
 
 }
 
-.top-left .background {
+.about-me .background {
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
@@ -50,39 +50,28 @@ body {
 }
 
 
-.center-right{
-  grid-area: center-right;
+.contact{
+  grid-area: contact;
 
 }
 
-.right{
-  grid-area: right;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+.travel{
+  grid-area: travel;
 }
 
-.bottom-center{
-  grid-area: bot-center;
-  flex-direction: column;
-  align-items: flex-end;
+.portfolio{
+  grid-area: portfolio;
+
 }
 
-.bottom-center .text {
+.portfolio .text {
   display: flex;
   flex-direction: column;
-
 }
 
 
-
-
-
-.bottom-left {
-  grid-area: bot-left;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+.something {
+  grid-area: something;
 }
 
 /***********STYLING ************************/
@@ -156,4 +145,71 @@ background: linear-gradient(45deg, #ff89e9 0%,#05abe0 100%);*/
   background-color:transparent;
   -webkit-transition:all .2s ease-in-out;
   transition:all .2s ease-in-out;
+}
+
+
+/*************MEDIA QUERIES **********************/
+@media only screen and (max-width: 900px){
+  body {
+    height: auto !important;
+    width: 96%;
+    grid-template:
+        "header header " 15vh
+        "about-me about-me" 80vh
+        "portfolio portfolio" 80vh
+        "contact travel" 50vh
+        "something travel" 50vh
+         / 1fr 1fr;
+         padding: 0 5px;
+  }
+  .about-me{
+    grid-area: about-me;
+
+  }
+
+  .about-me .background {
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+
+  }
+
+
+  .contact{
+    grid-area: contact;
+
+  }
+
+  .travel{
+    grid-area: travel;
+  }
+
+  .portfolio{
+    grid-area: portfolio;
+
+  }
+
+  .portfolio .text {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  .something {
+    grid-area: something;
+  }
+
+  .hovered .middle-icons{
+    width: 33% !important;
+    margin-left: -5px;
+    left: 35%;
+    margin-top: -3.5%;
+  }
+
+   .hovered .top-icons, .hovered .bottom-icons {
+    left: 37%;
+    margin-top: -3.5%;
+  }
+
+
 }
