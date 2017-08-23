@@ -155,13 +155,19 @@ background: linear-gradient(45deg, #ff89e9 0%,#05abe0 100%);*/
     width: 96%;
     grid-template:
         "header header " 15vh
-        "about-me about-me" 80vh
-        "portfolio portfolio" 80vh
-        "contact travel" 50vh
-        "something travel" 50vh
+        "about-me about-me" 50vh
+        "portfolio portfolio" 50vh
+        "contact travel" 30vh
+        "something travel" 30vh
          / 1fr 1fr;
          padding: 0 5px;
   }
+
+  #logo-img {
+    width: 20vw;
+    transform: scale(1.2);
+  }
+
   .about-me{
     grid-area: about-me;
 
@@ -178,6 +184,24 @@ background: linear-gradient(45deg, #ff89e9 0%,#05abe0 100%);*/
   .contact{
     grid-area: contact;
 
+  }
+
+  #contact hr {
+    width: 70% !important;
+
+  }
+
+  #contact a i{
+    font-size: 19px!important;
+  }
+
+
+  .top-icons {
+    top: 37% !important;
+  }
+
+  .bottom-icons {
+    margin-left: 2px !important;
   }
 
   .travel{
@@ -197,17 +221,22 @@ background: linear-gradient(45deg, #ff89e9 0%,#05abe0 100%);*/
 
   .something {
     grid-area: something;
+
+  }
+
+  .something p {
+    font-size: 0.9rem !important;
   }
 
   .hovered .middle-icons{
-    width: 33% !important;
-    margin-left: -5px;
-    left: 35%;
+    width: 36% !important;
+    justify-content: space-between;
+    left: 32%;
     margin-top: -3.5%;
   }
 
    .hovered .top-icons, .hovered .bottom-icons {
-    left: 37%;
+    left: 36.5%;
     margin-top: -3.5%;
   }
 

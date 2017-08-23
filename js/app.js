@@ -9,8 +9,9 @@ $(document).ready(function(){
 
   $(document).scroll(function(){
     if(widthW<901){
-      var divStarts = [heightW*0.09, heightW*0.8479, heightW*1.66 ];
+      var divStarts = [heightW*0.00, heightW*0.29, heightW*.75 ];
       var y = $(document).scrollTop();
+      console.log(y);
 
       if(y>divStarts[0] && y<divStarts[1]){
         $('.main, .contact').removeClass('hovered');
